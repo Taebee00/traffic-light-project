@@ -49,41 +49,13 @@
 모든 상황에서 저 8개의 state가 표에 표시된 대로 동작하고, 그렇다는 것은 모든 상태를 3개의 Binary값으로 나타낼 수 있음을 의미한다. 따라서
 A,B,C 3개의 Binary변수를 통해 state마다 값을 지정하고, 그에 따라 각 LED의 점등 여부를 논리식의 조합으로 표현할 수 있다.
 
-
 ## 회로도 구성
-
 ![image](https://github.com/Taebee00/traffic-light-project/assets/104549849/55f0f155-59ac-44c7-8fbe-2a0b0b09cfb6)
 
+트랜지스터를 활용하여 위 논리식에 맞게 회로 연결
+- IC-7408 (AND gate 트랜지스터) 1개
+- IC-7432 (OR gate 트랜지스터) 2개
+- IC-7404(NOT gate 트랜지스터) 2개
 
 
-## Detection
-### Face Detection
-- Dlib library 에서 제공하는 `get_frontal_face_detector`함수를 이용하여 이미지 속 얼굴의 위치를 detect
-- `shape_predictor`함수를 이용하여 detect된 얼굴을 68개의 landmark로 변환
-
-![image](https://github.com/Taebee00/sleep-detection-system/assets/104549849/a8d12e17-0f28-4d23-9dc4-b51d683f8103)
-
-### Eye Blink Detection
-- Eye Aspect Ratio(EAR) Algorithm
-
-  눈의 종횡 비 변화를 이용해 눈 감김을 판단하는 알고리즘
-  
-  ![image](https://github.com/Taebee00/sleep-detection-system/assets/104549849/50a3af23-f12e-4373-a9cb-432633a210e4)
-  
-- Face Detection을 통해 얻은 68개의 landmark 중 눈에 해당하는 36~47번 landmark를 이용하여 EAR rate를 계산
-- EAR rate가 감소하며 눈의 종횡 비가 감소한 것이므로 '눈 감김'으로 판단
-- '눈 감김'의 빈도를 count 하여 졸음을 감지
-
-![image](https://github.com/Taebee00/sleep-detection-system/assets/104549849/5df815f4-9d9b-41ca-ac85-fee027cfcc9b)
-
-## Warning
-- I2C LCD에 경고 메세지 출력
-`lcd.writ_string('Careful\r\nAre you sleepy?)`
-- espeak를 통해 경고 메시지를 TTS 방식으로 출력
-`os.system("espeak -a 200 -p 20 -s 240 -v en-us+f5" + " " +text)`
-
-## 기대 효과 및 장점
-- 단순히 눈을 감았다 뜨는 것이 아닌, 일정한 시간 안에 몇 번 감았는지를 계산해 운전자의 졸음 여부를 확실하고 체계적으로 감시하고 감지할 수 있음
-- 졸음을 감지하면 운전자에게 시각적으로, 청각적으로 신호를 전달하여 운전자가 즉각적인 피드백을 받을 수 있도록 함
-- 운전 관련 분야가 아닌 거짓말 탐지 등, 눈을 깜빡임을 인식하는 다른 다양한 분야에도 쓰일 수 있음
 
