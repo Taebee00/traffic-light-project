@@ -52,10 +52,14 @@ A,B,C 3개의 Binary변수를 통해 state마다 값을 지정하고, 그에 따
 ## 회로도 구성
 ![image](https://github.com/Taebee00/traffic-light-project/assets/104549849/55f0f155-59ac-44c7-8fbe-2a0b0b09cfb6)
 
-트랜지스터를 활용하여 위 논리식에 맞게 회로 연결
-- IC-7408 (AND gate 트랜지스터) 1개
-- IC-7432 (OR gate 트랜지스터) 2개
-- IC-7404(NOT gate 트랜지스터) 2개
+
+## 개발 환경
+- Board: OpenCR
+- IDE: Eclipse
+- IC: 
+  1. IC-7408 (AND gate) 1개 
+  2. IC-7432 (OR gate) 2개
+  3. IC-7404 (NOT gate) 2개
 
 
 
