@@ -1,9 +1,9 @@
 # traffic-light-project
-2021년 1학기 펌웨어및디바이스드라이버 기말 프로젝트
+2021년 1학기 **펌웨어및디바이스드라이버** 기말 프로젝트 - **IC칩**과 **마이크로컨트롤러**를 사용하여 **교차로 신호등** 구현
+
+> 상세 동영상 링크: https://youtu.be/elduLZWbFLk
 
 ![image](https://github.com/Taebee00/traffic-light-project/assets/104549849/6f7f0567-ac9d-48b2-be8b-6dbf06ecc190)
-
-상세 동영상 링크 <[https://youtu.be/T8NQtY3ZAkc](https://youtu.be/elduLZWbFLk)>
 
 ## 프로젝트 조건
 - 4거리 신호등 구현 
