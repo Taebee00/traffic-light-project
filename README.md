@@ -1,4 +1,4 @@
-# traffic-light-project
+# Traffic-Light State-Machine
 2021년 1학기 **펌웨어및디바이스드라이버** 기말 프로젝트 - **IC칩**과 **마이크로컨트롤러**를 사용하여 **교차로 신호등** 구현
 
 > 상세 동영상 링크: https://youtu.be/elduLZWbFLk
